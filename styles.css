@@ -462,19 +462,33 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 
 /* ---------- CTA final ---------- */
 
+/* Turquesa de marca de borde a borde, texto en negro carbon (contraste 9.7:1) */
 .cta {
-  background:
-    radial-gradient(70% 120% at 50% 0%, rgba(1, 208, 206, .22) 0%, transparent 60%),
-    var(--ink);
-  color: rgba(255, 255, 255, .72);
+  background: var(--brand);
+  color: var(--ink);
   padding-block: clamp(64px, 9vw, 112px);
   text-align: center;
 }
 .cta-inner { max-width: 640px; }
-.cta h2 { color: #fff; }
+.cta h2 { color: var(--ink); }
 .cta p { font-size: 1.05rem; margin-bottom: 2rem; }
 .cta-alt { margin-top: 1.5rem; font-size: .95rem; margin-bottom: 0; }
-.cta-alt a { color: var(--brand); text-decoration-color: rgba(1, 208, 206, .5); }
+.cta-alt a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration-color: rgba(22, 19, 18, .45);
+}
+
+/* Sobre turquesa el boton se invierte: negro con texto blanco, sin glow */
+.cta .btn-primary {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: none;
+}
+.cta .btn-primary:hover {
+  background: #2C2523;
+  box-shadow: none;
+}
 
 /* ---------- Footer ---------- */
 
