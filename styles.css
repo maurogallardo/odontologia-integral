@@ -234,15 +234,16 @@ ul { margin: 0; padding: 0; list-style: none; }
 @keyframes drop {
   from { opacity: 0; transform: translateY(-6px); }
 }
-.nav a {
+/* :not(.btn) para no pisar el estilo del CTA: `.nav a` (0,1,1) le gana a `.btn` (0,1,0) */
+.nav a:not(.btn) {
   padding: 12px 4px;
   color: var(--ink);
   font-weight: 500;
   text-decoration: none;
   border-radius: 8px;
 }
-.nav a:hover { color: var(--brand-deep); }
-.nav-cta { margin-top: 10px; justify-self: start; color: var(--ink); }
+.nav a:not(.btn):hover { color: var(--brand-deep); }
+.nav-cta { margin-top: 10px; justify-self: start; }
 
 /* ---------- Hero ---------- */
 
@@ -591,8 +592,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
     border: 0;
     box-shadow: none;
   }
-  .nav a { padding: 6px 0; font-size: .95rem; }
-  .nav-cta { margin-top: 0; padding: .62em 1.15em; flex: none; }
+  .nav a:not(.btn) { padding: 6px 0; font-size: .95rem; }
+  .nav-cta { margin-top: 0; flex: none; }
   .brand-mark { width: 40px; }
   .brand-name { font-size: 1.05rem; }
   .brand-name span { display: inline; }
