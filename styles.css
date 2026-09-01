@@ -487,6 +487,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   display: grid;
   gap: 32px;
   padding-bottom: 32px;
+  justify-items: center;
+  text-align: center;
 }
 .footer-brand img { width: 96px; height: auto; }
 .footer-col h3 {
@@ -527,6 +529,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
     justify-content: space-between;
     gap: 48px;
     align-items: start;
+    justify-items: start;
+    text-align: left;
   }
 
   .gallery {
